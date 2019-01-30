@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(logErrors);
 app.use(errorHandler);
 
-app.use('/loja', express.static(__dirname + '/public/', { 'index': 'index.html' }));
+app.use('/vitrine', express.static(__dirname + '/public/', { 'index': 'index.html' }));
 
 
 app.listen(cfg.PORT, cfg.HOST, function () {
