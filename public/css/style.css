@@ -19,37 +19,91 @@ body {
 }
 
 header {
-    float: left;
-    clear: none;
     width: 100%;
     margin-left: 0;
     margin-right: 3%;
     background: #f7d100;
     padding: 10px;
-    text-align: center
+    text-align: center;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
 }
 
 header:last-child {
     margin-right: 0
 }
 
-header a {
+header .item {
     color: #454545;
-    text-decoration: none
+    text-decoration: none;
+    width: 33%;
 }
 
 header h2 {
     font-family: "Open Sans";
     font-weight: 800;
-    font-size: 18px
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.header .btn {
+    float: right;
 }
 
 .banner {
     clear: both;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
     display: block;
     margin: 0 auto;
+}
+
+.banner.auto {
+    width: auto;
+    max-width: 80%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner+a {
+    text-align: center;
+    padding-top: 20px;
+    display: block;
+    padding-bottom: 20px;
+}
+
+.banner.doacao {
+    max-width: 400px;
+}
+
+.btn {
+    background: black;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 900px) {
+    .header {
+        display: block;
+        text-align: center;
+    }
+    header .item {
+        width: auto;
+    }
+    .header .btn {
+        float: none;
+        margin-top: 10px;
+        display: block;
+    }
+    .banner.doacao {
+        max-width: 80%;
+    }
 }
 
 
